@@ -97,7 +97,7 @@ def game_logic args
   
     #Manager buys pickaxes
     if args.state.manager_owned == true
-      while args.state.pickaxe_durability_total < ((args.state.worker_number) * args.state.pickaxe_durability)
+      while args.state.pickaxe_durability_total < ((args.state.worker_number + 1) * args.state.pickaxe_durability)
         if args.state.total_gold_count >= (args.state.pickaxe_price * args.state.manager_price_multiplier)
           args.state.total_gold_count -= (args.state.pickaxe_price * args.state.manager_price_multiplier)
           args.state.pickaxe_durability_total += args.state.pickaxe_durability
